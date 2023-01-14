@@ -10,9 +10,9 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/hello', [IndexController::class, 'show']);
 
 Route::resource('listing', ListingController::class)
-  ->only(['index', 'show', 'create', 'store']);
+  ->except(['destroy']);
 
-//   Route::get('listing/index', [ListingController::class], 'index');
+  // Route::get('listing/index', [ListingController::class], 'index');
 //   Route::get('listing/show', [ListingController::class], 'show');
 
 //   Route::post('listing/create', [ListingController::class], 'create');
