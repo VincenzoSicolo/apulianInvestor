@@ -8,7 +8,7 @@
         </div>
         <div class="mt-4">
           <label for="email" class="label">E-mail (username)</label>
-          <input id="email" v-model="form.email" type="text" class="input" />
+          <input id="email" v-model="form.email" type="email" class="input" />
           <div v-if="form.errors.email" class="input-error">{{ form.errors.email }}</div>
         </div>
         <div class="mt-4">
@@ -36,5 +36,5 @@
     password_confirmation: null,
     name: null,
   })
-  const register = () => form.post('')
+  const register = () => form.post(route('user-account.store'))
   </script>
