@@ -10,7 +10,7 @@
             <Link :href="route('listing.index')">ApulianInvestor</Link>
           </div>
           <div>
-            <Link :href="route('listing.create')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md ">+ New Listing</Link>
+            <Link :href="route('listing.create')" class="btn-primary ">+ New Listing</Link>
           </div>
         </nav>
       </div>
@@ -18,7 +18,7 @@
 
     <main class="container mx-auto p-4">
       <!-- <div>timer {{ timer }}</div> -->
-    <div v-if="flashSuccess" class="mb-4 border rounded-md shadow-sm border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900 p-2">
+    <div v-if="flashSuccess" class="flash-success">
     {{ flashSuccess }}
   </div>
     <slot>Default</slot>
