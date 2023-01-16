@@ -64,11 +64,11 @@
   
   <script setup>
   import Price from '@/Components/Price.vue';
-import ListingSpace from '@/Components/ListingSpace.vue';
-import ListingAddress from '@/Components/ListingAddress.vue';
-import Box from '@/Components/UI/box.vue';
-import {ref} from 'vue'
-import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
+  import ListingSpace from '@/Components/ListingSpace.vue';
+  import ListingAddress from '@/Components/ListingAddress.vue';
+  import Box from '@/Components/UI/box.vue';
+  import {ref} from 'vue'
+  import {useMonthlyPayment} from '@/Composables/useMonthlyPayment'
 
 const interestRate = ref(2.5)
 const duration = ref(25)

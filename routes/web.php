@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ListingController;
@@ -9,9 +10,15 @@ Route::get('/', [IndexController::class, 'index']);
 
 Route::get('/hello', [IndexController::class, 'show']);
 
+
 Route::resource('listing', ListingController::class);
 
-  // Route::get('listing/index', [ListingController::class], 'index');
-//   Route::get('listing/show', [ListingController::class], 'show');
+// Login route
+Route::get('login', [AuthController::class, 'create'])
+  ->name('login');
+Route::post('login', [AuthController::class, 'store'])
+  ->name('login.store');
+  
+Route::delete('logout', [AuthController::class, 'destroy'])
+  ->name('logout');
 
-//   Route::post('listing/create', [ListingController::class], 'create');
